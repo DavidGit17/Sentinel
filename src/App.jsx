@@ -1,8 +1,10 @@
-import Header from "./Components/Header";
+import HeroSection from "./Components/HeroSection";
+import Navbar from "./Components/Navbar";
 function App() {
   return (
     <>
-      <Header />
+      <Navbar />
+      <HeroSection />
     </>
   );
 }

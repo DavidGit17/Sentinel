@@ -7,7 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        customRed: '#000000',
+        customGreynav: '#272525',
+        customPurple:'#9600ff',
+      },
+      fontFamily:{
+         
       },
     },
   },
