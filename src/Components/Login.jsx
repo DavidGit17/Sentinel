@@ -1,9 +1,7 @@
 function Login()
 {
     return(
-        <Login>
-          
-        </Login>
+        <></>
     )
 };
 
