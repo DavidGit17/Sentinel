@@ -1,0 +1,49 @@
+ <!-- // <header className="mt-1 font-customStint">
+    //   {/* Top Navigation (replace with your content) */}
+    //   <navtop className="text-white flex justify-end py-1 pr-5 font-customRoboto font-thin"> {/* Centered navtop */}
+    //     <a onClick={() => {}} href="/Login" className="">Hacker login</a>
+    //     <p className="h-6 w-0.5 bg-customPurple mx-3 font-extrabold"></p>
+    //     <a className="">Customer login</a>
+    //   </navtop>
+
+    //   Main Navigation
+    //   <nav className="bg-customGreynav h-12 flex items-center justify-between relative">
+    //     <div className="pl-7">
+    //       <img className="h-9" src="src\assets\Sen1.png" alt="Logo" />
+    //     </div>
+    //      Menu Icon
+    //     <div className="block lg:hidden pr-4" onClick={toggleMenu}>
+    //       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
+    //         <line x1="3" y1="6" x2="21" y2="6"></line>
+    //         <line x1="3" y1="12" x2="21" y2="12"></line>
+    //         <line x1="3" y1="18" x2="21" y2="18"></line>
+    //       </svg>
+    //     </div>
+    //     Desktop NavLinks
+    //     <div className="hidden lg:flex lg:items-center absolute right-0 ">
+    //       <navlinks className="pr-5">
+    //         <ul className="text-white flex flex-col lg:flex-row lg:gap-10">
+    //           <a href="/" className=""><li>Home</li></a>
+    //           <a href="" className=""><li>Why Sentinel</li></a>
+    //           <a href="" className=""><li>Hacker</li></a>
+    //           <a href="" className=""><li>About Us</li></a>
+    //           <a href="" className=""><li>Contact Us</li></a>
+    //         </ul>
+    //       </navlinks>
+    //     </div>
+    //     Mobile NavLinks
+    //     <div className={`lg:hidden mobile-navlinks-wrapper absolute top-12 left-0 right-0 z-10`}> {/* Position below navbar and cover full width */}
+    //       <div className={`bg-customGreynav p-4 transition-all duration-300 ${isMenuOpen ? 'block' : 'hidden'} height-0 overflow-hidden`}> {/* Set initial height to 0 for smooth transition */}
+    //         <navlinks className={`flex justify-center items-center`}> {/* Center links horizontally and vertically */}
+    //           <ul className="text-white flex flex-col lg:flex-row lg:gap-10">
+    //             <a href="/" className=""><li>Home</li></a>
+    //             <a href="" className=""><li>Why Sentinel</li></a>
+    //             <a href="" className=""><li>Hacker</li></a>
+    //             <a href="" className=""><li>About Us</li></a>
+    //             <a href="" className=""><li>Contact Us</li></a>
+    //           </ul>
+    //         </navlinks>
+    //       </div>
+    //     </div>
+    //   </nav>
+    // </header> -->
