@@ -2,17 +2,17 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landingpage from "./Components/Landingpage";
 import Homepage from "./Components/Homepage";
-import Navbar from "./Navbar";
 import Hackerlogin from "./Components/Login/Hackerlogin";
 import Customerlogin from "./Components/Login/Customerlogin";
-import Signup from "./Components/Signup";
-import Cusignup from "./Components/cusignup";
-import Penforpass from "./Components/penforpass";
-import Comforpass from "./Components/comforpass";
+import Signup from "./Components/Hacker/Signup";
+import Cusignup from "./Components/Customer/cusignup";
+import Penforpass from "./Components/Hacker/penforpass";
+import Comforpass from "./Components/Customer/comforpass";
 import WhySentinel from "./Components/WhySentinel";
 import Hacker from "./Components/Hacker";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
+import Dashboard from "./Components/Dashboard";
 function App() {
   return (
     <Router>
@@ -30,6 +30,7 @@ function App() {
           <Route path="/hacker" element={<Hacker/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/dashboard" element={<Dashboard/>} />
         </Routes>
     </Router>
   );

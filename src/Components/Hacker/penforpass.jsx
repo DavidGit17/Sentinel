@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-function Comforpass(){
+function Penforpass(){
   return (
     <div className="desktops:max-w-full relative h-screen w-screen overflow-hidden">
       {/* Video background */}
       <video
-        src="src\assets\1110751_Animation_Blurred_Glitter_1920x1080 (1).mp4"
+        src="src\assets\login Gif.mp4"
         className="desktops:w-screen desktops:h-full object-cover z-0"
         autoPlay
         loop
@@ -15,10 +15,10 @@ function Comforpass(){
       ></video>
 
       {/* Semi-transparent overlay */}
-      <div className="absolute inset-0 bg-black opacity-80 z-0"></div>
+      <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
 
       {/* Navbar */}
-      <div className="absolute top-0 left-0 p-5 z-10">
+      <div className="absolute top-10 left-10 px-[142px] z-20">
         {/* Wrapping the image inside the Link component */}
         <Link to="/homepage" className="leading-5 tracking-widest">
           <h1 className="font-customsfuidisplay text-[20px] text-white">SENTINEL</h1>
@@ -34,11 +34,10 @@ function Comforpass(){
           Reset Password
         </h1>
         <form
-          className="text-white flex flex-col border rounded-lg px-10 py-10"
-          onClick={<Homepage />}>
+          className="text-white flex flex-col border rounded-lg px-10 py-10">
             <div className='flex flex-col'>
                 <label htmlFor="" className="">Email</label>
-                <input type="email" className="h-[27px] text-black mb-10 rounded"/>
+                <input type="email" className="h-[27px] text-black mb-10 rounded" required/>
                 <button className="bg-customPurple px-2 rounded">Send</button>
             </div>
         </form>
@@ -47,4 +46,4 @@ function Comforpass(){
   )
 }
 
-export default Comforpass;
+export default Penforpass;

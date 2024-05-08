@@ -17,7 +17,7 @@ function Customerlogin(){
       <div className="absolute inset-0 bg-black opacity-80 z-0"></div>
 
       {/* Navbar */}
-      <div className="absolute top-0 left-0 px-[142px]  py-10 z-10">
+      <div className="absolute top-10 left-10 px-[142px] z-30">
         {/* Wrapping the image inside the Link component */}
         <Link to="/homepage" className="leading-5 tracking-widest">
           <h1 className="font-customsfuidisplay text-[20px] text-white">
@@ -46,7 +46,7 @@ function Customerlogin(){
         </div>
         <form
           className="text-white flex flex-col border rounded-lg px-10"
-          onClick={<Homepage />}
+
         >
           <label className="pt-16">Email</label>
           <input className="w-60 h-7 rounded text-black pl-2" required />

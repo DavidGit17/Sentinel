@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Landingpage from './Landingpage'
 function Homepage() {
   return (
@@ -8,4 +8,4 @@ function Homepage() {
   )
 }
 
-export default Homepage
+export default Homepage;

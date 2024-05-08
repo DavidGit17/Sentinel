@@ -2,7 +2,6 @@ import Navbar from "../Navbar";
 function WhySentinel(){
   return (
     <div className="">
-      <Navbar />
       <div
         id="accordion-collapse"
         data-accordion="collapse"
