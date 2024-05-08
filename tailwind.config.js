@@ -3,6 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/flowbite/**/*.js,jsx",
   ],
   theme: {
     extend: {
@@ -21,8 +22,13 @@ export default {
         customRoboto:['Roboto, san-serif'],
         customInter:['Inter, sans-serif'],
         customStint:['Stint, sans-serif'],
+        customsfuidisplay:['sfuidisplay, Stint'],
+        customsfuidisplaylight:['sfuidisplaylight, Stint'],
+        customsfuidisplaybold:['sfuidisplaybold, Stint']
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }

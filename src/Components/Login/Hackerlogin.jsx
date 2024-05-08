@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { Homepage } from "../Homepage";
-export const Hackerlogin = () => {
+export const Hackerlogin = () =>{
   return (
     <div className="desktops:max-w-full relative h-screen w-screen overflow-hidden">
       {/* Video background */}
@@ -20,41 +19,45 @@ export const Hackerlogin = () => {
       {/* Navbar */}
       <div className="absolute top-0 left-0 p-5 z-10">
         {/* Wrapping the image inside the Link component */}
-        <Link to="/">
-          <img
-            className="h-[64px] w-[90px]"
-            src="src\assets\Sen filled png.png"
-            alt="Logo"
-          />
+        <Link to="/homepage" className="leading-5 tracking-widest">
+          <h1 className="font-customsfuidisplay text-[20px] text-white">SENTINEL</h1>
+          <h1 className="text-customPurple font-customsfuidisplaybold text-[20px]">
+            SHIELD
+          </h1>
         </Link>
       </div>
 
       {/* Form container */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pb-96 ">
-        <h1 className="text-white">Login as Pentester</h1>
-        <div className="flex justify-end">
+      <div className="absolute inset-0 flex flex-col items-center py-20 z-10">
+        <h1 className="text-white pb-10 text-2xl font-customsfuidisplaybold">
+          Login as Pentester
+        </h1>
+        <div className="flex pl-40 font-customsfuidisplaylight pr-6 pb-3">
           <h3 className="text-white flex flex-col">
             Don't have an account?
+            <Link to="">
             <span className="text-blue-500 flex justify-end">
               Create an account
-            </span>
+            </span></Link>
           </h3>
         </div>
         <form
-          className="text-white flex flex-col border px-40 "
+          className="text-white flex flex-col border rounded-lg px-10"
           onClick={<Homepage />}
         >
-          <h3>Email</h3>
-          <input className="" />
-          <h3>Password</h3>
-          <input className="" />
-          <div>
-            <input type="checkbox" />
-            <> Remember me</>
+          <label className="pt-16">Email</label>
+          <input className="w-60 h-7 rounded text-black pl-2" required />
+          <label className="pt-7">Password</label>
+          <input className="w-60 h-7 rounded pl-2 text-black" required />
+          <div className="flex items-center pt-5 pb-7">
+            <input type="checkbox" className="rounded"/>
+            <p className="pl-1">Remember me</p>
           </div>
-          <button type="submit">Log in</button>
-          <div>
-            <h3>Forgot your password?<span>Reset Password</span></h3>
+          <button type="submit" className=" bg-customPurple rounded font-customsfuidisplaylight text-sm py-1">Log in</button>
+          <div className="pt-3 pb-14">
+            <p className="text-[10px]">
+              Forgot your password? <Link to="/penforpass"><span className="text-blue-500">Reset Password</span></Link>
+            </p>
           </div>
         </form>
       </div>

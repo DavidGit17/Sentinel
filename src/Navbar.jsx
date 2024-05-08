@@ -1,33 +1,35 @@
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
-export const Navbar = () => {
-  const LoginTypeSelection = () => {
-    const [userType, setUserType] = useState(null);
+function Navbar() {
+  const location = useLocation();
 
-    const handleHackerClick = () => setUserType("Hacker");
-    const handleCustomerClick = () => setUserType("Customer");
-  };
+  const tabs = [
+    { name: 'Home', path: '/homepage' },
+    { name: 'Why Sentinel', path: '/whysentinel' },
+    { name: 'Hacker', path: '/hacker' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Contact Us', path: '/contact' },
+  ];
+
   return (
-    <nav className="bg-customGreynav h-16 w-screen mb-16 flex items-center justify-between text-white px-5">
-      <div className="flex items-center">
-      <div className="img flex pr-10">
-        <Link to="/homepage">
-        <img src="src\assets\Sen filled finale.png" className="h-16 w-fit"></img>
-        </Link>
-      </div>
-      <div className="navlinks flex gap-10 ">
-        <Link to="/homepage" className="">Home</Link>
-        <Link to="/whysentinel" className="">WhySentinal</Link>
-        <Link to="/hacker" className="">Hacker</Link>
-        <Link to="/about" className="">AboutUs</Link>
-        <Link to="/contact" className="">ContactUs</Link>
-      </div>
-      </div>
-      <div className="login-signup flex">
-        <Link to="" className="button">Login</Link>
-        <p className="border mx-2"></p>
-        <Link to="" className="button">SignUp</Link>
-      </div>
+    <nav className="bg-gray-800 text-white p-4">
+      <ul className="flex justify-around">
+        {tabs.map((tab) => (
+          <li key={tab.path}>
+            <Link
+              to={tab.path}
+              className={`px-4 py-2 rounded-md ${
+                location.pathname === tab.path ? 'bg-blue-500' : 'hover:bg-gray-700'
+              }`}
+            >
+              {tab.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
-};
+}
+
+export default Navbar;

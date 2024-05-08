@@ -4,6 +4,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@font-face {
+  font-family: 'sfuidisplay';
+  src: url('src/assets/fonts/SFUIText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'sfuidisplaylight';
+  src: url('src/assets/fonts/SFUIText-Light.ttf') format('truetype');
+  font-weight: light;
+  font-style: light;
+}
+
+@font-face {
+  font-family: 'sfuidisplaybold';
+  src: url('src/assets/fonts/SFUIText-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+}
+
 .bd
 {
    border: 1px solid white;
@@ -38,6 +59,30 @@
    transform: translateY(-1px);
  }
 
+ .button1 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #9600ff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button1:hover {
+  background-color: #9600ff;
+  box-shadow: 0px 15px 20px rgba(141, 46, 229, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button1:active {
+  transform: translateY(-1px);
+}
+
 /* Animated-text  */
  .animated-text {
    color: #fff; /* Initial color */
@@ -55,7 +100,7 @@
 
 
  ::-webkit-scrollbar {
-   width: 10px; /* Adjust width as desired */
+   width: 6px; /* Adjust width as desired */
    height: 11px; /* Adjust height as desired */
  }
  
@@ -65,9 +110,80 @@
  
  /* Reduce thumb size */
  ::-webkit-scrollbar-thumb {
-   width: 8px; /* Adjust width for thumb size reduction */
+   width: 6px; /* Adjust width for thumb size reduction */
    height: 8px; /* Adjust height for thumb size reduction */
-   background: #3b82f6;
+   background: #8800ff;
  }
  
+ .line
+ {
+   line-height: 12px;
+ }
+
+.strap
+{
+    background-image: linear-gradient(to right, #9747FF, #180A2A); 
+}
+
+.button2
+{
+  background-color: #9600ff;
+  transition: all 0.3s ease 0s;
+}
+
+.button2:hover {
+  background-color: #9600ff;
+  box-shadow: 0px 15px 20px rgba(141, 46, 229, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
  
+}
+
+.button2:active {
+  transform: translateY(-1px);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  list-style-type: none;
+  height: 100%;
+}
+
+.nav li {
+ 
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav a:hover {
+  color: #9600ff;
+}
+
+.nav a:hover::before {
+  width: 100%;
+}
+
+.navy
+{
+  background-image: linear-gradient(to right, #000000, #121010,#603D8E);
+}
