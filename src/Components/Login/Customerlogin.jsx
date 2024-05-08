@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-export const Customerlogin = () => {
+function Customerlogin(){
   return (
     <div className="desktops:max-w-full relative h-screen w-screen overflow-hidden">
       {/* Video background */}
@@ -75,3 +75,5 @@ export const Customerlogin = () => {
     </div>
   );
 };
+
+export default Customerlogin;

@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { Navbar } from "../Navbar";
 import { Link } from "react-router-dom";
-import { WhySentinel } from "./WhySentinel";
-export const Landingpage = () => {
+import WhySentinel from "./WhySentinel";
+import Navbar from "../Navbar";
+function Landingpage (){
   return (
     <div className="mx-auto overflow-hidden font-customRoboto">
+      <Navbar/>
       <div class="relative h-screen">
         <video
           autoPlay
@@ -23,13 +23,13 @@ export const Landingpage = () => {
           </p>
           <div className="flex gap-10 pt-16">
             <Link
-              to="homepage"
+              to="/homepage"
               className="text-white border border-white rounded-md px-2 py-[2px] bg-customGreynav"
             >
               Learn more
             </Link>
             <Link
-              to="contact"
+              to="/contact"
               className="text-white rounded-md px-2 py-[2px] bg-customPurple"
             >
               Get Started
@@ -39,7 +39,7 @@ export const Landingpage = () => {
       </div>
 
       <div className="bg-white h-screen w-screen text-black px-[142px] pt-10">
-        <p className="text-5xl font-customsfuidisplaybold pb-5 tracking-tight">
+        <p className="text-4xl font-customsfuidisplaybold pb-2 tracking-tight">
           How to Participate
         </p>
         <p className=" text-md pl-1 font-customsfuidisplaylight">
@@ -47,28 +47,29 @@ export const Landingpage = () => {
           program <br />
           and start hunting for bugs.
         </p>
-        <div className="pt-14">
+        <div className="pt-7">
           <ul className="flex items-center">
-            <li className="h-12 w-12 bg-black text-white py-1 px-3 rounded-full flex justify-center items-center text-[23px] align-middle">
+            <li className="h-11 w-12 bg-black text-white  px-3 rounded-full flex justify-center items-center text-[23px] align-middle">
               1
             </li>
             <li className="border border-black w-[300px] h-fit"></li>
-            <li className="h-12 w-12 bg-black text-white py-1 px-3 rounded-full flex justify-center items-center text-[23px] align-middle">
+            <li className="h-11 w-12 bg-black text-white  px-3 rounded-full flex justify-center items-center text-[23px] align-middle">
               2
             </li>
             <li className="border border-black w-[300px] h-fit"></li>
-            <li className="h-12 w-12 bg-black text-white py-1 px-3 rounded-full flex justify-center items-center text-[23px] align-middle">
+            <li className="h-11 w-12 bg-black text-white  px-3 rounded-full flex justify-center items-center text-[23px] align-middle">
               3
             </li>
             <li className="border border-black w-[300px] h-fit"></li>
-            <li className="h-12 w-12 bg-black text-white py-1 px-3 rounded-full flex justify-center items-center text-[23px] align-middle">
+            <li className="h-11 w-12 bg-black text-white  px-3 rounded-full flex justify-center items-center text-[23px] align-middle">
               4
             </li>
             <li className="border border-black w-[300px] h-fit"></li>
             <br />
           </ul>
+
           <div className="flex pt-5 px-6">
-            <div className="pr-[7rem] bg-[#f0f0f0] mr-2 w-fit rounded">
+            <div className="bg-[#f0f0f0] mr-14 w-fit rounded-xl p-6">
               <p className="text-black font-bold text-2xl text-justify leading-6 truncate">
                 Step 1: Sign up for
                 <br />
@@ -86,7 +87,7 @@ export const Landingpage = () => {
                 </span>
               </p>
             </div>
-            <div className="pr-[7rem]  bg-[#f0f0f0] mr-2 w-fit rounded">
+            <div className="bg-[#f0f0f0] mr-14 w-fit rounded-xl p-6">
               <p className="text-black font-bold text-2xl text-justify leading-6 truncate">
                 Step 2: Familiarize
                 <br />
@@ -105,14 +106,13 @@ export const Landingpage = () => {
                 </span>
               </p>
             </div>
-            <div className="pr-[8rem] bg-[#f0f0f0] mr-2 w-fit rounded">
+            <div className="bg-[#f0f0f0] mr-20 w-fit rounded-xl p-6">
               <p className="text-black font-bold text-2xl text-justify leading-6 truncate">
                 Step 3: Start
                 <br />
                 hunting for bugs
                 <br />
-                <div className="pb-3"></div>
-                <span className=" line text-black text-sm font-normal">
+                <span className=" line text-black text-sm font-normal w-fit h-fit">
                   Explore our applications and
                   <br />
                   systems to identify potential
@@ -125,7 +125,7 @@ export const Landingpage = () => {
                 </span>
               </p>
             </div>
-            <div className="bg-[#f0f0f0] mr-2 w-fit rounded">
+            <div className="bg-[#f0f0f0] mr-12 w-fit h-fit rounded-xl p-6">
               <p className="text-black font-bold text-2xl leading-6 truncate">
                 Step 4: Earn rewards
                 <br />
@@ -143,15 +143,15 @@ export const Landingpage = () => {
             </div>
           </div>
         </div>
-        <div className="pt-10 bg-[#f0f0f0]  rounded">
+        <div className="pt-10 rounded">
           <ul className="flex items-center">
-            <li className="h-12 w-12 bg-black text-white py-1 px-3 rounded-full flex justify-center items-center text-[23px] align-middle">
+            <li className="h-11 w-12 bg-black text-white px-3 rounded-full flex justify-center items-center text-[23px] align-middle">
               5
             </li>
             <li className="border border-black w-[14in] h-fit"></li>
           </ul>
           <div className="px-6 pt-5">
-            <p className="text-black font-bold text-2xl ">
+            <p className="text-black font-bold text-2xl bg-[#f0f0f0] rounded-xl p-6">
               Step 5: Stay engaged
               <br />
               <span className=" line text-black text-sm font-normal ">
@@ -195,7 +195,7 @@ export const Landingpage = () => {
           <button className="button1 py-2 px-4 w-fit mb-10">
             Get Started Now
           </button>
-          <Link to="hackerlogin">
+          <Link to="/hackerlogin">
             Log in here.
             <Link>
               <span className="text-customPurple font-bold">

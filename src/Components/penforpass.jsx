@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-function Penforpass() {
+function Penforpass(){
   return (
     <div className="desktops:max-w-full relative h-screen w-screen overflow-hidden">
       {/* Video background */}

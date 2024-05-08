@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-export const Cusignup = () => {
+function Cusignup() {
   return (
     <div className="desktops:max-w-full relative h-[] w-screen overflow-hidden">
       {/* Video background */}
@@ -87,3 +87,5 @@ export const Cusignup = () => {
     </div>
   );
 };
+
+export default Cusignup;
