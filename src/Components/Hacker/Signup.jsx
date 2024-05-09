@@ -1,5 +1,31 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 function Signup(){
+  const navigate = useNavigate()
+  const [formData, setFormData] = useState({
+    name: '',
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(formData)
+    localStorage.setItem('hacker', JSON.stringify(formData))
+    toast.success('Signup Successful')
+    // navigate.push('/hackerignin')
+  }
+
+
   return (
     <div className="desktops:max-w-full relative h-screen w-screen overflow-hidden">
       {/* Video background */}
@@ -44,24 +70,24 @@ function Signup(){
           <div className="flex flex-row pb-8 gap-14">
             <div className="flex flex-col font-customInter font-extralight">
               <label htmlFor="">Your Name</label>
-              <input type="text" id="" className="py-1 h-7 rounded"  required/>
+              <input type="text" id="" className="text-black py-1 h-7 rounded"  required name="name" value={formData.name} onChange={handleChange} />
             </div>
             <div className="flex flex-col font-customInter font-extralight">
               <label htmlFor="">Username</label>
-              <input type="text" id="" className="py-1 h-7 rounded"  required/>
+              <input type="text" id="" className="text-black py-1 h-7 rounded"  required name="username" value={formData.username} onChange={handleChange}/>
             </div>
           </div>
           <div className="flex flex-col pb-8 font-customInter font-extralight">
             <label htmlFor="">Email</label>
-            <input type="text" id="" className="py-1 h-7 rounded"  required/>
+            <input type="text" id="" className="text-black py-1 h-7 rounded"  required name="email" value={formData.email} onChange={handleChange}/>
           </div>
           <div className="flex flex-col pb-8 font-customInter font-extralight">
             <label htmlFor="">Password</label>
-            <input type="text" id="" className="py-1 h-7 rounded"  required/>
+            <input type="text" id="" className="text-black py-1 h-7 rounded"  required name="password" value={formData.password} onChange={handleChange}/>
           </div>
           <div className="flex flex-col pb-8 font-customInter font-extralight">
             <label htmlFor="">Confirm Password</label>
-            <input type="text" id="" className="py-1 h-7 rounded"  required/>
+            <input type="text" id="" className="text-black py-1 h-7 rounded"  required name="confirmPassword" value={formData.confirmPassword} onChange={handleChange}/>
           </div>
           <div className="flex items-center pb-8">
             <input type="checkbox" />
@@ -72,12 +98,12 @@ function Signup(){
             </p>
           </div>
           <div className="bg-customPurple rounded flex justify-center mx-20 py-1 font-customsfuidisplaybold">
-            <button className="px-40">SignUp</button>
+            <button onClick={handleSubmit} className="px-40">SignUp</button>
           </div>
         </form>
       </div>
     </div>
   );
-};
+}
 
 export default Signup;

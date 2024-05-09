@@ -1,5 +1,29 @@
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+import { useState } from "react";
+import toast from "react-hot-toast";
 function Customerlogin(){
+  const [email,setEmail] = useState('')
+  const [password,setPassword] = useState('')
+  const navigate = useNavigate()
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const data =JSON.parse(localStorage.getItem('customer'))
+    console.log(data)
+
+    if(data!==null) {
+      if(data.email == email && data.password == password ) {
+        toast.success('Login Successful')
+        // navigate.push('/dashboard')
+      }
+    }
+    else {
+      toast.error('User not found, Please Register')
+    }
+  
+  }
+
   return (
     <div className="desktops:max-w-full relative h-screen w-screen overflow-hidden">
       {/* Video background */}
@@ -49,15 +73,15 @@ function Customerlogin(){
 
         >
           <label className="pt-16">Email</label>
-          <input className="w-60 h-7 rounded text-black pl-2" required />
+          <input className="w-60 h-7 rounded text-black pl-2" value={email} required onChange={(e)=>{setEmail(e.target.value)}} />
           <label className="pt-7">Password</label>
-          <input className="w-60 h-7 rounded pl-2 text-black" required />
+          <input className="w-60 h-7 rounded pl-2 text-black" value={password} required onChange={(e)=>{setPassword(e.target.value)}} />
           <div className="flex items-center pt-5 pb-7">
             <input type="checkbox" className="rounded" />
             <p className="pl-1">Remember me</p>
           </div>
           <button
-            type="submit"
+            onClick={handleSubmit}
             className=" bg-customPurple rounded font-customsfuidisplaylight text-sm py-1"
           >
             Log in
@@ -74,6 +98,6 @@ function Customerlogin(){
       </div>
     </div>
   );
-};
+}
 
 export default Customerlogin;

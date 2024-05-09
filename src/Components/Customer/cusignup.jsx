@@ -1,5 +1,34 @@
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+import { useState,useEffect } from "react";
 function Cusignup() {
+  const navigate = useNavigate()
+  const [formData, setFormData] = useState({
+    name: '',
+    username: '',
+    email: '',
+    companyName: '',
+    mobileNumber: '',
+    password: '',
+    confirmPassword: ''
+  });
+
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(formData)
+    localStorage.setItem('customer', JSON.stringify(formData))
+    // navigate.push('/cusignin')
+  }
+
+  useEffect(()=>{
+    localStorage.setItem('customer',null)
+  },[])
+
   return (
     <div className="desktops:max-w-full relative h-[] w-screen overflow-hidden">
       {/* Video background */}
@@ -42,32 +71,32 @@ function Cusignup() {
           <div className="flex flex-row pb-8 gap-14">
             <div className="flex flex-col font-customInter font-extralight">
               <label htmlFor="">Your Name</label>
-              <input type="text" id="" className="py-1 h-7 rounded" required/>
+              <input type="text" id="" className="text-black py-1 h-7 rounded" required name="name" value={formData.name} onChange={handleChange}/>
             </div>
             <div className="flex flex-col font-customInter font-extralight">
               <label htmlFor="">Username</label>
-              <input type="text" id="" className="py-1 h-7 rounded" required/>
+              <input type="text" id="" className=" text-black py-1 h-7 rounded" required name="username" value={formData.username} onChange={handleChange}/>
             </div>
           </div>
           <div className="flex flex-col pb-8 font-customInter font-extralight">
             <label htmlFor="">Email</label>
-            <input type="text" id="" className="py-1 h-7 rounded" required/>
+            <input type="text" id="" className="text-black py-1 h-7 rounded" required name="email" value={formData.email} onChange={handleChange}/>
           </div>
           <div className="flex flex-col pb-8 font-customInter font-extralight">
             <label htmlFor="">Company Name</label>
-            <input type="text" id="" className="py-1 h-7 rounded" required/>
+            <input type="text" id="" className="text-black py-1 h-7 rounded" required name="companyName" value={formData.companyName}  onChange={handleChange}/>
           </div>
           <div className="flex flex-col pb-8 font-customInter font-extralight">
             <label htmlFor="">Mobile Number</label>
-            <input type="text" id="" className="py-1 h-7 rounded" required/>
+            <input type="text" id="" className="text-black py-1 h-7 rounded" required name="mobileNumber" value={formData.mobileNumber} onChange={handleChange}/>
           </div>
           <div className="flex flex-col pb-8 font-customInter font-extralight">
             <label htmlFor="">Password</label>
-            <input type="text" id="" className="py-1 h-7 rounded" required/>
+            <input type="text" id="" className="text-black py-1 h-7 rounded" required name="password" value={formData.password} onChange={handleChange}/>
           </div>
           <div className="flex flex-col pb-8 font-customInter font-extralight">
             <label htmlFor="">Confirm Password</label>
-            <input type="text" id="" className="py-1 h-7 rounded" required/>
+            <input type="text" id="" className="text-black py-1 h-7 rounded" required name="confirmPassword" value={formData.confirmPassword} onChange={handleChange}/>
           </div>
           <div className="flex items-center pb-8">
             <input type="checkbox" />
@@ -78,12 +107,12 @@ function Cusignup() {
             </p>
           </div>
           <div className="bg-customPurple rounded flex justify-center mx-20 py-1 font-customsfuidisplaybold">
-            <button>SignUp</button>
+            <button onClick={handleSubmit}>SignUp</button>
           </div>
         </form>
       </div>
     </div>
   );
-};
+}
 
 export default Cusignup;

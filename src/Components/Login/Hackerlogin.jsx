@@ -1,13 +1,30 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link,useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Dashboard from '../Dashboard';
+import toast from 'react-hot-toast';
 
 function Hackerlogin() {
   const navigate = useNavigate(); // Initialize navigate hook
+  const [email,setEmail] = useState('')
+  const [password,setPassword] = useState('')
+
 
   const handleFormSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission
-    navigate('/dashboard'); // Navigate to Dashboard after successful login
+    const data =JSON.parse(localStorage.getItem('hacker'))
+    console.log(data)
+
+    if(data!==null) {
+      if(data.email == email && data.password == password ) {
+        toast.success('Login Successful')
+        navigate('/dashboard');
+      }
+    }
+    else {
+      toast.error('User not found, Please Register')
+    }
+  
   };
 
   return (
@@ -49,7 +66,9 @@ function Hackerlogin() {
           <label className="block">Email</label>
           <input
             className="w-60 h-8 rounded text-black pl-2"
-            type="email"
+           
+            value={email}
+            onChange={(e)=>{setEmail(e.target.value)}}
             required
           />
 
@@ -57,6 +76,8 @@ function Hackerlogin() {
           <input
             className="w-60 h-8 rounded text-black pl-2"
             type="password"
+            value={password}
+            onChange={(e)=>{setPassword(e.target.value)}}
             required
           />
 
