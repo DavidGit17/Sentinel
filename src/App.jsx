@@ -13,6 +13,12 @@ import Hacker from "./Components/Hacker";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Dashboard from "./Components/Dashboard";
+import Programs from "./Components/Programs";
+import Submission from "./Components/Submission";
+import Work from "./Components/Work";
+import Payments from "./Components/Payments";
+import Leaderboard from "./Components/Leaderboard";
+
 function App() {
   return (
     <Router>
@@ -31,6 +37,11 @@ function App() {
           <Route path="/about" element={<About/>} />
           <Route path="/contact" element={<Contact/>} />
           <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/programs" element={<Programs />}/>
+          <Route path="/submission" element={<Submission/>} />
+          <Route path="/work" element={<Work/>}/>
+          <Route path="/payments" element={<Payments/>}/>
+          <Route path="/leaderboard" element={<Leaderboard/>}/>   
         </Routes>
     </Router>
   );

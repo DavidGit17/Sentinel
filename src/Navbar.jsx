@@ -43,7 +43,7 @@ function Navbar() {
       {/* Main navbar with navigation tabs */}
       <nav className="navy text-white py-2 px-[142px]">
         <div className="flex justify-between items-center">
-          <Link to="/homepage" className="no-underline"> {/* Company name */}
+          <Link to="/" className="no-underline"> {/* Company name */}
             <p className="text-lg font-customsfuidisplay font-medium leading-5">
               {companyNamef}
               <br />
