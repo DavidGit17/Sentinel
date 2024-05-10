@@ -1,4 +1,4 @@
-import { Link,useNavigate } from "react-router-dom";
+import { Link,Navigate,useNavigate } from "react-router-dom";
 import { useState,useEffect } from "react";
 function Cusignup() {
   const navigate = useNavigate()
@@ -22,7 +22,7 @@ function Cusignup() {
     e.preventDefault()
     console.log(formData)
     localStorage.setItem('customer', JSON.stringify(formData))
-    // navigate.push('/cusignin')
+    navigate('/cusdash')
   }
 
   useEffect(()=>{

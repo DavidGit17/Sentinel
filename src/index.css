@@ -188,3 +188,20 @@
   background-image: linear-gradient(to right, #000000, #121010,#603D8E);
 }
 
+.progress-bar {
+  height: 10px;
+  width: 250px;
+  background-color: white;
+  background-clip: border-box; /* Ensures background covers the entire element */
+  position: relative; /* Allows positioning of the progress fill */
+}
+
+.progress-bar::after {
+  content: ""; /* Add pseudo-element to represent progress fill */
+  position: absolute;
+  width: 10px;
+  top: 0;
+  left: 0;
+  height: 100%; /* Fills the entire height of the progress bar */
+  background-color: #9600FF;
+}

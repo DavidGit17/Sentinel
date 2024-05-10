@@ -49,64 +49,144 @@ function Dashboard() {
           />
         </div>
       </div>
-      <div className="flex pt-20 h-fit gap-7">
-        <div className="border w-[400px] h-[350px] rounded-3xl">
-          <div className="">
-            <img src="src\assets\ben-sweet-2LowviVHZ-E-unsplash 1.png" alt="" />
+      <div className=" h-[1500px] flex gap-14">
+        <div className="border w-[300px] h-fit my-[110px] flex flex-col justify-center gap-10">
+          <div className="border h-[400px] rounded-3xl flex flex-col">
+            <div>
+              <img
+                src="src\assets\ben-sweet-2LowviVHZ-E-unsplash 1.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <p className="text-white font-customsfuidisplaybold flex justify-center h-10">
+                David. B
+              </p>
+            </div>
+            <div className=""></div>
+            <div className="flex flex-col gap-5 bg-[#1a1a1a] rounded-3xl pt-5 h-full">
+              <div className="text-white flex justify-between px-4 font-customsfuidisplaybold ">
+                <p className="text-white">Resolved reports</p>
+                <p>0%</p>
+              </div>
+              <div className="px-4">
+                <div className=" h-2.5 bg-white">
+                  <div className="h-2.5 w-[10px] bg-customPurple"></div>
+                </div>
+              </div>
+              <div className="w-full">
+                <div className=" text-white flex justify-between px-4">
+                  <div>
+                    <p>Low</p>
+                  </div>
+                  <div>
+                    <p>Medium</p>
+                  </div>
+                  <div>
+                    <p>High</p>
+                  </div>
+                  <div>
+                    <p>Critical</p>
+                  </div>
+                </div>
+              </div>
+              <div className="text-white w-full flex justify-center gap-16">
+                <div>
+                  <p>0</p>
+                </div>
+                <div>
+                  <p>0</p>
+                </div>
+                <div>
+                  <p>0</p>
+                </div>
+                <div>
+                  <p>0</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="bg-[#111111] pb-10 rounded-3xl">
-            <div className="text-white flex justify-between px-5 font-customsfuidisplaylight">
-              <p>Resolved reports</p>
-              <p>0%</p>
+          <div className="border h-[400px] rounded-3xl">
+            <div className="flex justify-center gap-4 pt-5">
+              <div>
+                <img src="src\assets\graph 1.png" alt="" />
+              </div>
+              <div>
+                <p className="text-white font-customsfuidisplaybold text-[20px]">
+                  Activity
+                </p>
+              </div>
             </div>
-            <div className="border mx-5 h-2.5  bg-gray-200 mt-4">
-              <div className="border h-2 w-3 bg-customPurple"></div>
+            <div className="px-5 gap-5 flex flex-col pt-10">
+              <img src="src\assets\Group 19.png" alt="" />
+              <img src="src\assets\Group 19.png" alt="" />
+              <img src="src\assets\Group 19.png" alt="" />
             </div>
-            <div className="text-white flex justify-between px-5 pt-10">
+          </div>
+          <div className="border h-[400px] rounded-3xl flex flex-col items-center pt-10">
+            <div>
+              <img
+                src="src\assets\marketing (1) 1.png"
+                className="h-10"
+                alt=""
+              />
+            </div>
+            <div>
+              <p className="text-white font-customsfuidisplaybold pb-10">
+                Announcements
+              </p>
+            </div>
+            <div className="px-5 flex flex-col gap-14">
               <div>
-                <p>Low</p>
-                <p className="flex items-center justify-center pt-3">0</p>
+                <img src="src\assets\Rectangle 2718.png" alt="" />
               </div>
               <div>
-                <p>Medium</p>
-                <p className="flex items-center justify-center pt-3">0</p>
+                <img src="src\assets\Rectangle 2719.png" alt="" />
               </div>
               <div>
-                <p>High</p>
-                <p className="flex items-center justify-center pt-3">0</p>
-              </div>
-              <div>
-                <p>Critical</p>
-                <p className="flex items-center justify-center pt-3">0</p>
+                <img src="src\assets\Rectangle 2720.png" alt="" />
               </div>
             </div>
           </div>
         </div>
-        <div className="border w-screen h-[560px] rounded-3xl px-10 py-6 bg-[#c1c1c122]">
-          <div className="text-white font-customsfuidisplaybold text-2xl">
-            <p>Rewards</p>
+        <div className="border w-[900px] my-[110px] h-fit flex flex-col gap-10">
+          <div className="border h-[550px] rounded-3xl text-white font-customsfuidisplaybold px-10 py-10 flex flex-col">
+            <div>
+              <div>
+                <p className="text-xl pb-10">Rewards</p>
+              </div>
+              <div className="flex gap-80">
+                <div>
+                  <div>
+                    <p className="text-white">
+                      Last 30 <br />
+                      Days
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <p className="text-white">Reports Submitted</p>
+                  </div>
+                  <div className="">
+                    <p className="text-white">0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="text-white bg-[#3F3F3F] border h-[260px] mt-12">
+              <div className="flex">
+                <div className="bg-[#F8F8F8] border h-[130px] w-[50%] mx-20 flex flex-col justify-center items-end pr-2 gap-5">
+                  <div className="border bg-[#3F3F3F] h-2.5 w-40"></div>
+                  <div className="border bg-[#3F3F3F] h-2.5 w-40"></div>
+                  <div className="border bg-[#3F3F3F] h-2.5 w-40"></div>
+                </div>
+                <div className="bg-[#7D7D7D] border h-[130px] w-[50%] mx-20 "></div>
+              </div>
+              <div>adasd</div>
+            </div>
           </div>
-          <div className="text-white font-customsfuidisplaybold flex gap-80">
-            <div className="leading-5">
-              <p>
-                Last 30 <br />
-                Days
-              </p>
-              <p className="pt-2 text-[20px]">$ 0.00</p>
-            </div>
-            <div className="leading-5">
-              <p>
-                Last 30 <br />
-                Days
-              </p>
-              <p className="pt-2 text-[20px]">$ 0.00</p>
-            </div>
-          </div>
-          <div className="flex gap-5 flex-col">
-              <div className="border w-16 h-10"></div>
-              <div className="border w-16 h-10"></div>
-              <div className="border w-16 h-10"></div>
-            </div>
+          <div className="border h-[800px] rounded-3xl"></div>
         </div>
       </div>
     </div>

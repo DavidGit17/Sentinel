@@ -18,7 +18,7 @@ import Submission from "./Components/Submission";
 import Work from "./Components/Work";
 import Payments from "./Components/Payments";
 import Leaderboard from "./Components/Leaderboard";
-
+import Cusdash from "./Components/cusdash";
 function App() {
   return (
     <Router>
@@ -41,7 +41,8 @@ function App() {
           <Route path="/submission" element={<Submission/>} />
           <Route path="/work" element={<Work/>}/>
           <Route path="/payments" element={<Payments/>}/>
-          <Route path="/leaderboard" element={<Leaderboard/>}/>   
+          <Route path="/leaderboard" element={<Leaderboard/>}/>
+          <Route path="/cusdash" element={<Cusdash/>} />
         </Routes>
     </Router>
   );
