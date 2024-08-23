@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function Cusdash() {
+function Custasks() {
   return (
     <div className="bg-white h-[1920px]">
       <div className="bg-black h-14 flex justify-between px-2 items-center">
@@ -30,38 +30,20 @@ function Cusdash() {
           />
         </div>
       </div>
-      <div className="bg-[#F0F0F0] h-80 ">
-        <div className="border border-[#a8a8a8] pt-14 flex gap-10 px-28 ">
+      <div className="bg-[#F0F0F0] h-24 ">
+        <div className=" pt-14 flex gap-10 px-28 ">
           <Link to="/cusdash">
-            <p className="border border-b-customPurple ">
+            <p className="">
               What's new <p className=""></p>
             </p>
           </Link>
-
           <Link to="/custasks">
-            <p className="">Tasks</p>
+            <p className="border border-b-customPurple  w-14">Tasks</p>
           </Link>
-        </div>
-        <div className="font-customsfuidisplay px-28 p-10">
-          <p>Microsoft,</p>
-          <p className="font-customsfuidisplaybold text-2xl">
-            Good Morning, David
-          </p>
-        </div>
-        <div className="px-28 pt-40 ">
-          <p className="font-customsfuidisplaybold text-lg">Programs</p>
-          <div className="flex">
-            <img src="src\assets\Group 115.png" alt="" />
-            <img
-              src="src\assets\Screenshot 2024-05-10 100749.png"
-              className="w-60 h-80"
-              alt=""
-            />
-          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default Cusdash;
+export default Custasks;

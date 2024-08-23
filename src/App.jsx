@@ -19,6 +19,10 @@ import Work from "./Components/Work";
 import Payments from "./Components/Payments";
 import Leaderboard from "./Components/Leaderboard";
 import Cusdash from "./Components/cusdash";
+import Profile from "./Components/profile";
+import Custasks from "./Components/custasks";
+import Slogin from "./Components/slogin";
+import Practo from "./Components/practo";
 function App() {
   return (
     <Router>
@@ -43,6 +47,10 @@ function App() {
           <Route path="/payments" element={<Payments/>}/>
           <Route path="/leaderboard" element={<Leaderboard/>}/>
           <Route path="/cusdash" element={<Cusdash/>} />
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/custasks" element={<Custasks/>}/>
+          <Route path="/slogin" element={<Slogin/>}/>
+          <Route path="/practo" element={<Practo/>}/>
         </Routes>
     </Router>
   );

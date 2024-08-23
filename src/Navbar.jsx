@@ -18,7 +18,7 @@ function Navbar() {
   const tabs = [
     { name: 'Home', path: '/homepage' },
     { name: 'Why Sentinel', path: '/whysentinel' },
-    { name: 'Hacker', path: '/hacker' },
+    { name: 'Hacker', path: '/practo' },
     { name: 'About Us', path: '/about' },
     { name: 'Contact Us', path: '/contact' },
   ];

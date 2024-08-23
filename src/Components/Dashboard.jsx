@@ -43,14 +43,16 @@ function Dashboard() {
         </div>
 
         <div className="border h-10 w-10 rounded-full border-transparent">
-          <img
-            src="src/assets/make_a_logo_named_SENTINEL_SHIELD_and_merge_se 1.png"
-            alt="Logo"
-          />
+          <Link>
+            <img
+              src="src/assets/make_a_logo_named_SENTINEL_SHIELD_and_merge_se 1.png"
+              alt="Logo"
+            />
+          </Link>
         </div>
       </div>
       <div className=" h-[1500px] flex gap-14">
-        <div className="border w-[300px] h-fit my-[110px] flex flex-col justify-center gap-10">
+        <div className=" w-[300px] h-fit my-[110px] flex flex-col justify-center gap-10">
           <div className="border h-[400px] rounded-3xl flex flex-col">
             <div>
               <img
@@ -149,7 +151,7 @@ function Dashboard() {
             </div>
           </div>
         </div>
-        <div className="border w-[900px] my-[110px] h-fit flex flex-col gap-10">
+        <div className=" w-[900px] my-[110px] h-fit flex flex-col gap-10">
           <div className="border h-[550px] rounded-3xl text-white font-customsfuidisplaybold px-10 py-10 flex flex-col">
             <div>
               <div>
@@ -174,19 +176,37 @@ function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="text-white bg-[#3F3F3F] border h-[260px] mt-12">
+            <div className="text-white bg-[#3F3F3F]  h-[260px] mt-12 pt-7">
               <div className="flex">
-                <div className="bg-[#F8F8F8] border h-[130px] w-[50%] mx-20 flex flex-col justify-center items-end pr-2 gap-5">
+                <div className="bg-[#F8F8F8] border rounded-md h-[130px] w-[50%] mx-20 flex flex-col justify-center items-end pr-2 gap-5">
+                  <div className="border bg-[#3F3F3F] h-2.5 w-10"></div>
                   <div className="border bg-[#3F3F3F] h-2.5 w-40"></div>
-                  <div className="border bg-[#3F3F3F] h-2.5 w-40"></div>
-                  <div className="border bg-[#3F3F3F] h-2.5 w-40"></div>
+                  <div className="border bg-[#3F3F3F] h-2.5 w-20"></div>
                 </div>
-                <div className="bg-[#7D7D7D] border h-[130px] w-[50%] mx-20 "></div>
+                <div className="bg-[#7D7D7D] border h-[130px] rounded-md  w-[50%] mx-20 flex flex-col items-end justify-center gap-5 border-transparent">
+                  <div className="border bg-[#3F3F3F] h-2.5 w-10 border-transparent"></div>
+                  <div className="border bg-[#3F3F3F] h-2.5 w-40 border-transparent"></div>
+                  <div className="border bg-[#3F3F3F] h-2.5 w-20 border-transparent"></div>
+                </div>
               </div>
-              <div>adasd</div>
+              <div className="flex flex-col items-center pt-5">
+                <div>
+                  <p>You haven't submitted any report</p>
+                </div>
+                <div>
+                  <p className="text-[#ABABAB]">
+                    When you submit reports or gain access to an program,
+                    they'll appear here.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="border h-[800px] rounded-3xl"></div>
+          <div className="border h-fit rounded-3xl">
+            <div>
+              <img src="src\assets\owasp.png" alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

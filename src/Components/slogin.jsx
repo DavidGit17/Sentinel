@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link,useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Dashboard from '../Dashboard';
 import toast from 'react-hot-toast';
 
-function Hackerlogin() {
+function Slogin() {
   const navigate = useNavigate(); // Initialize navigate hook
   const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
+
 
   const handleFormSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission
@@ -29,29 +29,12 @@ function Hackerlogin() {
   return (
     <div className="relative h-screen w-screen overflow-hidden">
       {/* Video background */}
-      <video
-        src="src/assets/login Gif.mp4" // Ensure this path is correct
-        className="w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-      ></video>
-
-      {/* Semi-transparent overlay */}
-      <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
-
+      
       {/* Form container */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-20"> {/* High z-index to stay above the overlay */}
         
-        {/* Company name on the left side */}
-        <div className="absolute top-10 left-10 px-[142px]"> {/* Position company name on the top left */}
-          <Link to="/homepage" className="text-white no-underline text-[20px] leading-5">
-            <p className="font-customsfuidisplaybold">SENTINEL</p>
-            <p className="font-customsfuidisplay font-semibold text-customPurple">SHIELD</p>
-          </Link>
-        </div>
 
-        <h1 className="text-2xl font-bold pb-2">Login as Pentester</h1>
+        <h1 className="text-2xl font-normal pb-2">Login</h1>
         <div className="pt-5 text-right w-screen flex justify-center pl-[150px]">
           <p>
             Don't have an account? 
@@ -87,18 +70,18 @@ function Hackerlogin() {
 
           <button
             type="submit"
-            className="bg-customPurple text-white rounded px-24 py-1"
+            className="bg-white text-black rounded px-24 py-1"
           >
             Log in
           </button>
         </form>
 
-        <div className="pt-5">
+        {/* <div className="pt-5">
           <p>
             Forgot your password? 
             <Link to="/penforpass" className="text-blue-500"> Reset Password</Link>
           </p>
-        </div>
+        </div> */}
 
         
       </div>
@@ -106,4 +89,4 @@ function Hackerlogin() {
   );
 }
 
-export default Hackerlogin;
+export default Slogin;
