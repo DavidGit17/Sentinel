@@ -5,8 +5,8 @@ import Dashboard from '../Dashboard';
 import toast from 'react-hot-toast';
 
 function Hackerlogin() {
-  const navigate = useNavigate(); // Initialize navigate hook
-  const [email,setEmail] = useState('')
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('')
   const [password,setPassword] = useState('')
 
   const handleFormSubmit = (e) => {

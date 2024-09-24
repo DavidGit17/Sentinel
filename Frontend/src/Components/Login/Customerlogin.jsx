@@ -6,7 +6,6 @@ function Customerlogin(){
   const [password,setPassword] = useState('')
   const navigate = useNavigate()
 
-
   const handleSubmit = (e) => {
     e.preventDefault()
     const data =JSON.parse(localStorage.getItem('customer'))

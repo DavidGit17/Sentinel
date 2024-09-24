@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Landingpage from "./Components/Landingpage";
+
 import Homepage from "./Components/Homepage";
 import Hackerlogin from "./Components/Login/Hackerlogin";
 import Customerlogin from "./Components/Login/Customerlogin";
@@ -16,18 +16,18 @@ import Dashboard from "./Components/Dashboard";
 import Programs from "./Components/Programs";
 import Submission from "./Components/Submission";
 import Work from "./Components/Work";
-import Payments from "./Components/Payments";
 import Leaderboard from "./Components/Leaderboard";
 import Cusdash from "./Components/cusdash";
 import Profile from "./Components/profile";
 import Custasks from "./Components/custasks";
 import Slogin from "./Components/slogin";
-import Practo from "./Components/practo";
+import Landingpage from "./Components/Landingpage";
+
 function App() {
   return (
     <Router>
         <Routes>
-          <Route path="/" element={<Landingpage/>} />
+          <Route path="/" element={<Landingpage />} />
           <Route path="/homepage" element={<Homepage/>} />
           <Route path="/hackerlogin" element={<Hackerlogin/>} />
           <Route path="/customerlogin" element={<Customerlogin/>} />
@@ -50,7 +50,6 @@ function App() {
           <Route path="/profile" element={<Profile/>}/>
           <Route path="/custasks" element={<Custasks/>}/>
           <Route path="/slogin" element={<Slogin/>}/>
-          <Route path="/practo" element={<Practo/>}/>
         </Routes>
     </Router>
   );
