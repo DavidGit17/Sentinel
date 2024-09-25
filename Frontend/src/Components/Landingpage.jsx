@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import WhySentinel from "./WhySentinel";
 import Navbar from "../Navbar";
-function Landingpage (){
+function Landingpage() {
   return (
     <div className="mx-auto overflow-hidden font-customRoboto">
-      <Navbar/>
+      <Navbar />
       <div class="relative h-screen">
         <video
           autoPlay
@@ -342,12 +342,12 @@ function Landingpage (){
       </div>
       <div className="text-white bg-[#1A1A1A] flex justify-center h-fit pt-10 items-center pb-20 pl-[180px]">
         <div className="flex flex-col ">
-        <h1 className="">Sentinel Shield Inc.</h1>
-        <p>&copy; 2024 Sentinel Shield Inc. All rights reserved.</p>
+          <h1 className="">Sentinel Shield Inc.</h1>
+          <p>&copy; 2024 Sentinel Shield Inc. All rights reserved.</p>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Landingpage;
