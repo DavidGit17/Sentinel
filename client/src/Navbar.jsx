@@ -25,7 +25,6 @@ function Navbar() {
 
   return (
     <div>
-      {/* Conditionally render the top navbar based on the current path */}
       { !hideTopNavbarPaths.includes(location.pathname) && (
         <nav className="black text-white py-2 px-[160px] flex justify-end"> {/* Top navbar */}
           <div className="flex space-x-6"> {/* Links */}
