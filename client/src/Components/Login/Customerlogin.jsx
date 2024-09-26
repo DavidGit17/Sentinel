@@ -14,7 +14,7 @@ function Customerlogin(){
     if(data!==null) {
       if(data.email == email && data.password == password ) {
         toast.success('Login Successful')
-        // navigate.push('/dashboard')
+        navigate.push('/dashboard')
       }
     }
     else {
