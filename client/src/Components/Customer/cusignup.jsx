@@ -58,7 +58,7 @@ function Cusignup() {
         </Link>
       </div>
 
-      {/* Form container */}
+      {/* Form cont */}
       <div className="absolute inset-0 flex flex-col items-center pt-40 z-10 ">
         <div className="flex pr-[120px]">
           <h1 className="text-white pb-4  text-2xl font-customsfuidisplaybold text-[20px] leading-tight">

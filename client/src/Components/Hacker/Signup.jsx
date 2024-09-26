@@ -22,7 +22,7 @@ function Signup(){
     console.log(formData)
     localStorage.setItem('hacker', JSON.stringify(formData))
     toast.success('Signup Successful')
-    // navigate.push('/hackerignin')
+    navigate.push('/hackerignin')
   }
 
 

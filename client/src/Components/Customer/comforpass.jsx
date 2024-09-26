@@ -28,7 +28,7 @@ function Comforpass(){
         </Link>
       </div>
 
-      {/* Form container */}
+      {/* Form cont */}
       <div className="absolute inset-0 flex flex-col items-center py-40 z-10">
         <h1 className="text-white pb-10 text-2xl font-customsfuidisplaybold">
           Reset Password
